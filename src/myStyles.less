@@ -1,0 +1,79 @@
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html{font-size: 62.5%; font-family: sans-serif}
+body{background: #333;}
+
+@functionColor: #225d9e;
+@numberColor: #184379;
+@displayColor: #323335;
+@operatorColor: #237293;
+@backgroundColor: #a81d36;
+.calculator{
+    width: 470px;
+    height: 700px;
+    border-radius: 15px;
+    margin: 1vh auto;
+    background-color: @backgroundColor;
+    border: 2px solid #525051;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    .logo{
+        margin: 0 auto;
+        width: 85%;
+        margin-bottom: 10px;
+        img{
+            height: 42px;
+            width: 150px;
+        }
+    }
+    .display{ 
+        height: 100px;
+        width: 85%;
+        margin: 0 auto;
+        background-color: @displayColor;
+        border-radius: 70px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 20px;
+        font-size: 5rem;
+        color: white;
+        margin-bottom: 3%;
+    }
+    .buttons{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 70%;
+        // background-color: rgba(0,0,0,0.3);
+        border-radius: 15px;
+        box-shadow:above;
+        .row{
+            height: 15%;
+            width: 100%;
+            border-radius: 15px;
+            // background-color: rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: space-evenly;
+            button{
+                width: 80px;
+                height: 80px;
+                border-radius: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 3rem;
+                color: white;
+                border:none;
+                box-shadow: 0 4px #222;
+                &.zero{
+                    width:185px;
+                }
+            }
+        }
+    }
+}
+.function{ background-color: @functionColor; }
+.operator{ background-color: @operatorColor; }
+.number{ background-color: @numberColor; }
